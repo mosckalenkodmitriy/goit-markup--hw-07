@@ -6,6 +6,7 @@
 }
 
 .portfolio__btn {
+  @include font(16px, 1.6, 0.03em, normal);
   background-color: $primary-button-color;
   color: $primary-text-color;
   border: transparent;

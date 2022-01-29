@@ -34,7 +34,8 @@
   padding: 20px 24px 4px;
 }
 .product-card__discription {
-  @include font(26px, 1.2, bold, 0.03em);
+  @include font(16px, 1.98, normal, 0.03em);
   color: $primary-grey-color;
   margin: 0;
+  padding: 4px 24px 20px;
 }

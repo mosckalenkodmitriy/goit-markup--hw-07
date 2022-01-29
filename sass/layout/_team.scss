@@ -55,8 +55,15 @@
 
   &__name {
     @include font(16px, 1.18, 500, 0.03em);
+    color: $primary-text-color;
     padding-top: 30px;
     padding-bottom: 10px;
     min-width: 109px;
+  }
+  &__metier {
+    @include font(16px, 1.18, 500, 0.03em);
+    color: $primary-grey-color;
+    margin-top: 0;
+    margin-bottom: 16px;
   }
 }

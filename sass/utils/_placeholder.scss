@@ -1,5 +1,5 @@
 %button {
-  @include font(16px, 1.9, 0.06, bold);
+  @include font(16px, 1.9, 0.06em, bold);
   font-family: Raleway;
   color: $primary-white-color;
   background-color: $primary-blue-color;

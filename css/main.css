@@ -1,7 +1,7 @@
 .button, .modal__button {
   font-size: 16px;
   line-height: 1.9;
-  font-weight: 0.06;
+  font-weight: 0.06em;
   letter-spacing: bold;
   font-family: Raleway;
   color: #ffffff;
@@ -680,9 +680,20 @@ textarea {
   line-height: 1.18;
   font-weight: 500;
   letter-spacing: 0.03em;
+  color: #212121;
   padding-top: 30px;
   padding-bottom: 10px;
   min-width: 109px;
+}
+
+.team-list__metier {
+  font-size: 16px;
+  line-height: 1.18;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #757575;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .client__links {
@@ -739,6 +750,10 @@ textarea {
 }
 
 .portfolio__btn {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 0.03em;
+  letter-spacing: normal;
   background-color: #f5f4fa;
   color: #212121;
   border: transparent;
@@ -801,12 +816,13 @@ textarea {
 }
 
 .product-card__discription {
-  font-size: 26px;
-  line-height: 1.2;
-  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.98;
+  font-weight: normal;
   letter-spacing: 0.03em;
   color: #757575;
   margin: 0;
+  padding: 4px 24px 20px;
 }
 
 .header {
@@ -964,6 +980,18 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   height: 86px;
+}
+
+.newsletter-form__label {
+  font-size: 14px;
+  line-height: 1.14;
+  font-weight: 0.03em;
+  letter-spacing: bold;
+  color: #ffffff;
+  font-family: Roboto;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .newsletter-form__input {
