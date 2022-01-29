@@ -1,0 +1,48 @@
+.header {
+  border: 1px solid #ececec;
+  padding: 0;
+}
+.container__header {
+  display: flex;
+  align-items: center;
+}
+
+//Site-nav
+.site-nav {
+  display: flex;
+  margin-left: 90px;
+  &__item {
+    & + & {
+      margin-left: 40px;
+    }
+  }
+}
+
+.site-nav__link {
+  @include font(14px, 1.14, 500, 0.02em);
+  display: block;
+  color: $primary-text-color;
+  transition: color 250ms $time-function;
+  padding-bottom: 32px;
+  padding-top: 32px;
+
+  &:hover,
+  &:focus {
+    color: $primary-blue-color;
+  }
+  &.current {
+    color: $primary-blue-color;
+    position: relative;
+  }
+  &.current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: #2196f3;
+    border-radius: 2px;
+    display: block;
+  }
+}

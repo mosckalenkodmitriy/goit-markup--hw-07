@@ -1,0 +1,10 @@
+%button {
+  @include font(16px, 1.9, 0.06, bold);
+  font-family: Raleway;
+  color: $primary-white-color;
+  background-color: $primary-blue-color;
+  cursor: pointer;
+  border: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+}

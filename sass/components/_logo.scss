@@ -1,0 +1,8 @@
+.logo {
+  @include font(26px, 1.2, bold, 0.03em);
+  color: $primary-black-color;
+  font-family: Raleway;
+  &__web {
+    color: $primary-blue-color;
+  }
+}

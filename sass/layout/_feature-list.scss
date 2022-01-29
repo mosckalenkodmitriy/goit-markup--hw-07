@@ -1,0 +1,37 @@
+.container--indentation {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.dignity {
+  display: flex;
+  justify-content: space-between;
+
+  &__title {
+    @include font(14px, 1.14, 0.03em, bold);
+    color: $primary-text-color;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    text-align: left;
+    white-space: nowrap;
+  }
+  &__subtitle {
+    @include font(14px, 1.71, 0.03em, normal);
+    color: $primary-grey-color;
+    width: 270px;
+    text-align: left;
+  }
+}
+.dignity__icon-block {
+  background: $primary-button-color;
+  border-radius: 4px;
+  padding: 25px 100px;
+  width: 270px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}

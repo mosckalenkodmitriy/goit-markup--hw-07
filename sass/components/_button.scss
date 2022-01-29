@@ -1,0 +1,8 @@
+.button {
+  @extend %button;
+  transition: background-color 250ms $time-function, color 250ms $time-function;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

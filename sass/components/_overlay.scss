@@ -1,0 +1,47 @@
+// Overlay Text
+.product-card__overlay-text {
+  @include font(18px, 1.55, 0.03em, normal);
+  position: absolute;
+  background: $primary-blue-color;
+  z-index: 2;
+  top: 0px;
+  left: 24px;
+  width: 94%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  transform: translateY(135%);
+  transition: transform 250ms $time-function;
+  overflow: auto;
+
+  color: $primary-white-color;
+
+  .product-card:hover & {
+    transform: translateY(0);
+  }
+}
+
+// Overlay Window
+.product-card__overlay {
+  position: relative;
+  overflow: hidden;
+
+  .product-card:hover &::before {
+    transform: translateY(0);
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateY(100%);
+    transition: transform 250ms $time-function;
+  }
+}
