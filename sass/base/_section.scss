@@ -1,0 +1,10 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &-title {
+    text-align: center;
+    @include font(36px, 1.17, bold, 0.03em);
+    margin-bottom: 50px;
+    color: $primary-text-color;
+  }
+}

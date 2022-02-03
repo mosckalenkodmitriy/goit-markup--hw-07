@@ -1,14 +1,7 @@
-.container--indentation {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.dignity {
-  display: flex;
-  justify-content: space-between;
-
+.feature {
+  padding-bottom: 0;
   &__title {
-    @include font(14px, 1.14, 0.03em, bold);
+    @include font(14px, 1.14, 700, 0.03em);
     color: $primary-text-color;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -17,21 +10,18 @@
     white-space: nowrap;
   }
   &__subtitle {
-    @include font(14px, 1.71, 0.03em, normal);
+    @include font(14px, 1.71, normal, 0.03em);
     color: $primary-grey-color;
-    width: 270px;
     text-align: left;
   }
-}
-.dignity__icon-block {
-  background: $primary-button-color;
-  border-radius: 4px;
-  padding: 25px 100px;
-  width: 270px;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+  &__icon-block {
+    display: flex;
+    background: $primary-button-color;
+    border-radius: 4px;
+    padding: 25px 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
 }

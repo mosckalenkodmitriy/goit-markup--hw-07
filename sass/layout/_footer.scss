@@ -1,8 +1,5 @@
 .footer {
   background-color: #2f303a;
-  &__logo {
-    color: $primary-white-color;
-  }
   &__container {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -10,18 +7,7 @@
     display: flex;
   }
 }
-
 // Footer__feedback
-.footer__feedback {
-  flex-direction: column;
-
-  &_item {
-    margin: 0;
-  }
-  &_link:last-child {
-    margin-top: 9px;
-  }
-}
 
 // Subscribe
 .subscribe {
@@ -31,63 +17,46 @@
     color: $primary-white-color;
     margin-bottom: 20px;
     text-transform: uppercase;
-    @include font(14px, 1.14, 0.03em, bold);
-    &--margin {
-      margin-bottom: 0px;
-    }
+    @include font(14px, 1.14, bold, 0.03em);
   }
 }
 
 // Support
 .support__address {
-  @include font(14px, 1.7, 0.03em, normal);
+  @include font(14px, 1.7, normal, 0.03em);
   color: $primary-white-color;
 
   margin-top: 20px;
   margin-bottom: 9px;
-  width: 231px;
 }
 
 // Footer-socials
 .footer__socials-link {
-  margin-left: 10px;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: 0;
   fill: $primary-white-color;
   background-color: rgba(255, 255, 255, 0.1);
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  display: flex;
-  cursor: pointer;
-  transition: background-color 250ms $time-function, fill 250ms $time-function;
 }
 
 // Form
 .container__newsletter {
   margin-left: 93px;
-  padding: 0;
 }
 
 .newsletter-form {
   display: flex;
   height: 86px;
   &__label {
-    @include font(14px, 1.14, 0.03em, bold);
+    @include font(14px, 1.14, bold, 0.03em);
     color: $primary-white-color;
     font-family: Roboto;
-    margin-bottom: 20px;
+    // margin-bottom: 100px;
     text-transform: uppercase;
-    margin: 0;
+    // margin: 0;
   }
   &__input {
     @include font(16px, 1.06, 0.03em, normal);
 
     padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background: inherit;
@@ -101,23 +70,14 @@
 // Btn__telegram
 .newsletter-form__btn {
   position: relative;
-  color: $primary-white-color;
-  background-color: $primary-blue-color;
-  @include font(16px, 1.9, 0.06em, bold);
-  border: none;
-  border-radius: 4px;
-
   padding: 10px 62px 10px 29px;
-  cursor: pointer;
-  margin-left: 12px;
-  width: 200px;
-  height: 50px;
   align-self: flex-end;
+  margin-left: 12px;
 }
 .newsletter-form__icon {
+  top: 13px;
   right: 28px;
   position: absolute;
-  top: 13px;
 }
 
 .footer__feedback_item {

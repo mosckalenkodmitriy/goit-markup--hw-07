@@ -1,69 +1,26 @@
 .team {
-  padding-bottom: 94px;
   background-color: $primary-button-color;
-
-  &__title {
-    @include font(36px, 1.17, bold, 0.03em);
-    text-align: center;
-    margin-bottom: 50px;
-    padding-top: 94px;
-  }
-}
-
-.team-list {
-  display: flex;
-  @include font(16px, 1.18, normal, 0.03em);
-  justify-content: space-between;
-  color: $primary-grey-color;
-  margin: 0;
-  margin-bottom: 16px;
-
-  &__card {
+  &__item {
+    background: $primary-white-color;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-    background-color: $primary-white-color;
-
-    display: block;
+  }
+  &__item-wrapper {
+    padding: 30px;
     text-align: center;
-    width: 270px;
-    padding-bottom: 16px;
   }
-  &__card {
-    display: block;
-    text-align: center;
-    width: 270px;
-    padding-bottom: 16px;
+  &__item-title,
+  &__item-text {
+    font-size: 16px;
+    line-height: 1.19;
   }
-
-  & ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__card {
-    display: block;
-    text-align: center;
-    width: 270px;
-    padding-bottom: 16px;
-  }
-
-  &__appearance {
-    position: relative;
-    overflow: hidden;
-  }
-
-  &__name {
-    @include font(16px, 1.18, 500, 0.03em);
+  &__item-title {
+    margin-bottom: 10px;
+    font-weight: 500;
     color: $primary-text-color;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    min-width: 109px;
   }
-  &__metier {
-    @include font(16px, 1.18, 500, 0.03em);
-    color: $primary-grey-color;
-    margin-top: 0;
+  &__item-text {
     margin-bottom: 16px;
   }
 }

@@ -1,5 +1,5 @@
 %button {
-  @include font(16px, 1.9, 0.06em, bold);
+  @include font(16px, 1.9, bold, 0.06em);
   font-family: Raleway;
   color: $primary-white-color;
   background-color: $primary-blue-color;
@@ -7,4 +7,14 @@
   border: transparent;
   border-radius: 4px;
   padding: 10px 32px;
+  transition: background-color 250ms $time-function, color 250ms $time-function;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover,
+  &focus {
+    background-color: $second-blue-color;
+  }
 }

@@ -15,6 +15,7 @@
     margin-top: 40px;
     @include font(20px, 1.15, bold, 0.03em);
     text-align: center;
+    color: $primary-text-color;
   }
 
   &__form {
@@ -52,7 +53,6 @@
     color: $primary-blue-color;
   }
   &__button {
-    @extend %button;
     margin-top: 30px;
     position: absolute;
     left: 165px;
@@ -162,7 +162,7 @@
 // Modal-check
 .modal {
   &__checktext {
-    @include font(14px, 1.7, 0.03, normal);
+    @include font(14px, 1.7, normal, 0.03em);
   }
   &__checked {
     margin-top: 20px;
@@ -189,8 +189,8 @@
     transition: background-color 250ms $time-function,
       background-image 250ms $time-function;
     .modal__checkbox:checked + & {
-      background-color: $time-function;
-      background-image: url(../images/icons.svg/icon-check.svg);
+      background-color: $primary-blue-color;
+      background-image: url(../../images/icons/icon-check.svg);
       background-size: contain;
       background-origin: border-box;
       border: none;

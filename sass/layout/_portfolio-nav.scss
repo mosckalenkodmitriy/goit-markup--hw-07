@@ -1,12 +1,12 @@
-.container__list-button {
-  margin-top: 94px;
-  margin-bottom: 50px;
-  justify-content: center;
-  display: flex;
+.portfolio-nav {
+  padding-bottom: 0px;
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
 }
-
 .portfolio__btn {
-  @include font(16px, 1.6, 0.03em, normal);
+  @include font(16px, 1.6, normal, 0.03em);
   background-color: $primary-button-color;
   color: $primary-text-color;
   border: transparent;

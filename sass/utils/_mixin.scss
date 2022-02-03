@@ -4,3 +4,7 @@
   font-weight: $fw;
   letter-spacing: $ls;
 }
+@mixin card-set($marg-t, $marg-l) {
+  margin-top: $marg-t;
+  margin-left: $marg-l;
+}

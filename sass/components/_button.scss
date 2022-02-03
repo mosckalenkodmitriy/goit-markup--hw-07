@@ -5,4 +5,9 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover,
+  &focus {
+    background-color: $second-blue-color;
+  }
 }

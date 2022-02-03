@@ -1,0 +1,9 @@
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  @include card-set(-30px, -30px);
+}
+.card-set-item {
+  @include card-set(30px, 30px);
+  flex-basis: calc((100% / var(--card-set-item) - 30px));
+}
