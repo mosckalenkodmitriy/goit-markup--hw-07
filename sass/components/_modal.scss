@@ -3,8 +3,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
-  width: 528px;
+  min-width: 528px;
   height: 581px;
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -12,7 +13,7 @@
   border-radius: 4px;
 
   &__title {
-    margin-top: 40px;
+    margin-bottom: 40px;
     @include font(20px, 1.15, bold, 0.03em);
     text-align: center;
     color: $primary-text-color;
@@ -21,30 +22,31 @@
   &__form {
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    width: 448px;
   }
 
   &__label {
     position: relative;
-    margin-top: 30px;
+    margin-bottom: 30px;
     display: block;
     cursor: pointer;
+    &:hover,
+    &:focus {
+      border: 1px solid $primary-blue-color;
+    }
   }
 
   &__data {
     position: absolute;
-    top: 0;
-    left: 32px;
-    transform: translate(12px, 15px);
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
     color: $primary-grey-color;
     transition: transform 250ms $time-function;
   }
 
   &__comment {
     position: absolute;
-    top: -20px;
+    top: -22px;
     left: 0px;
     color: $primary-grey-color;
   }
@@ -53,9 +55,11 @@
     color: $primary-blue-color;
   }
   &__button {
-    margin-top: 30px;
-    position: absolute;
-    left: 165px;
+    min-width: 200px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
   }
 }
 
@@ -63,8 +67,8 @@
 
 .modal__close-btn {
   position: absolute;
-  right: 8px;
-  top: 8px;
+  right: 13px;
+  top: 7px;
   background-color: inherit;
   width: 30px;
   height: 30px;
@@ -79,12 +83,12 @@
   &:before,
   &:after {
     position: absolute;
-    right: 13px;
-    top: 7px;
+    right: 50%;
+    top: 8px;
     content: " ";
     height: 15px;
     width: 2px;
-    background-color: #000;
+    background-color: $primary-black-color;
     transition: background-color 250ms $time-function;
   }
   &:before {
@@ -114,15 +118,16 @@
   border-radius: 4px;
 
   &:focus + .modal__data,
-  &:not(:placeholder-shown) + .form-label {
-    transform: translate(-32px, -20px);
+  &:not(:placeholder-shown) + .modal__data {
+    transform: translate(-40px, -45px);
   }
-  &:focus {
-    border: 1px solid #2196f3;
+
+  &:focus,
+  &:hover {
+    border: 1px solid $primary-blue-color;
     outline: none;
   }
 }
-
 // Modal__input ~ Modal__icon
 .modal__input {
   & ~ .modal__icon {
@@ -150,9 +155,10 @@
     box-sizing: border-box;
     border-radius: 4px;
   }
-  &:focus {
+  &:focus,
+  &hover {
     outline: none;
-    border: 1px solid rgba(33, 33, 33, 0.2);
+    border: 1px solid $primary-blue-color;
   }
   &::placeholder {
     color: rgba(117, 117, 117, 0.5);
@@ -165,8 +171,11 @@
     @include font(14px, 1.7, normal, 0.03em);
   }
   &__checked {
-    margin-top: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-bottom: 30px;
   }
 }
 
@@ -181,9 +190,10 @@
   }
   &__iconcheck {
     display: inline-block;
-    width: 15px;
+    margin-right: 7px;
+    width: 16px;
     height: 15px;
-    border: 3px solid $primary-text-color;
+    border: 2px solid $primary-text-color;
     border-radius: 2px;
     background-size: cover;
     transition: background-color 250ms $time-function,
@@ -194,6 +204,10 @@
       background-size: contain;
       background-origin: border-box;
       border: none;
+    }
+    .modal__checkbox:focus + &,
+    .modal__checkbox:hover + & {
+      border: 1px solid $primary-blue-color;
     }
   }
 }

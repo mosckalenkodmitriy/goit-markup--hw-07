@@ -1,28 +1,27 @@
 .socials {
   display: flex;
   margin-left: -10px;
+  &__item {
+    margin-left: 10px;
+  }
 }
 
 // Sociacials__link
 .socials__link {
-  & {
-    padding-bottom: 30px;
-  }
-  & {
-    margin-left: 10px;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: 0;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    display: flex;
-    cursor: pointer;
-    fill: #afb1b8;
-    transition: fill 250ms $time-function, backround-color 250ms $time-function;
-  }
-  &:hover {
+  padding-bottom: 30px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+  fill: #afb1b8;
+  transition: fill 250ms $time-function, backround-color 250ms $time-function;
+  &:hover,
+  &:focus {
     background-color: $primary-blue-color;
     fill: $primary-white-color;
   }
