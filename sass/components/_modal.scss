@@ -200,7 +200,7 @@
       background-image 250ms $time-function;
     .modal__checkbox:checked + & {
       background-color: $primary-blue-color;
-      background-image: url(../../images/icons/icon-check.svg);
+      background-image: url(../images/icons/icon-check.svg);
       background-size: contain;
       background-origin: border-box;
       border: none;
