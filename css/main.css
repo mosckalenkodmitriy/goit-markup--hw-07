@@ -280,8 +280,8 @@ address {
 
 .modal__close-btn:before, .modal__close-btn:after {
   position: absolute;
-  right: 50%;
-  top: 8px;
+  right: 49%;
+  top: 24%;
   content: " ";
   height: 15px;
   width: 2px;
