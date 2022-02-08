@@ -77,8 +77,9 @@
   justify-content: center;
   transition: fill 250ms $time-function;
   &:hover,
-  &:focus ~ &_icon {
+  &:focus {
     fill: $primary-blue-color;
+    outline: none;
   }
 }
 // Modal-input
