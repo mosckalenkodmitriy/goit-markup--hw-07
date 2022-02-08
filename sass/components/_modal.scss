@@ -6,7 +6,7 @@
   padding: 40px;
 
   min-width: 528px;
-  height: 581px;
+  min-height: 581px;
   background-color: $primary-white-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -75,32 +75,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  &:before,
-  &:after {
-    position: absolute;
-    right: 49%;
-    top: 24%;
-    content: " ";
-    height: 15px;
-    width: 2px;
-    background-color: $primary-black-color;
-    transition: background-color 250ms $time-function;
-  }
-  &:before {
-    transform: rotate(45deg);
-  }
-  &:after {
-    transform: rotate(-45deg);
-  }
-  &:hover:after,
-  &:hover::before,
-  &:focus:after,
-  &:focus::before {
-    background-color: $primary-blue-color;
+  transition: fill 250ms $time-function;
+  &_icon:hover,
+  &_icon:focus {
+    fill: $primary-blue-color;
   }
 }
-
 // Modal-input
 .modal__input {
   display: block;
@@ -128,7 +108,7 @@
 .modal__input {
   & ~ .modal__icon {
     position: absolute;
-    top: 14px;
+    top: 12px;
     left: 14px;
     transition: fill 250ms $time-function;
   }
