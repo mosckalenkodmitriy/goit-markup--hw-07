@@ -76,8 +76,8 @@
   align-items: center;
   justify-content: center;
   transition: fill 250ms $time-function;
-  &_icon:hover,
-  &_icon:focus {
+  &:hover,
+  &:focus ~ &_icon {
     fill: $primary-blue-color;
   }
 }
