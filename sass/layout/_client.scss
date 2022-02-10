@@ -13,7 +13,7 @@
     justify-content: center;
     height: 92px;
     width: 100%;
-    transition: fill 250ms $time-function, border 250ms $time-function;
+    transition: border 250ms $time-function;
     &:hover,
     &:focus {
       border: 1px solid $primary-blue-color;

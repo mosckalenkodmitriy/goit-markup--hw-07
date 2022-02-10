@@ -194,6 +194,10 @@ address {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  -webkit-transition: -webkit-transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 450ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__title {
@@ -220,7 +224,6 @@ address {
   position: relative;
   margin-bottom: 30px;
   display: block;
-  cursor: pointer;
 }
 
 .modal__data {
@@ -234,6 +237,7 @@ address {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
 }
 
 .modal__comment {
@@ -289,6 +293,8 @@ address {
 }
 
 .modal__input {
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   width: 100%;
   padding-top: 12px;
@@ -338,6 +344,8 @@ address {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__textarea:focus, .modal__textarea:hover {
@@ -421,11 +429,19 @@ address {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 450ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: 0;
+}
+
+.backdrop.is-hidden .modal {
+  -webkit-transform: translate(0%, -100%) scale(1) rotate(45deg);
+          transform: translate(0%, -100%) scale(1) rotate(45deg);
 }
 
 .hero {
@@ -572,8 +588,8 @@ address {
           justify-content: center;
   height: 92px;
   width: 100%;
-  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client__link:hover, .client__link:focus {
@@ -611,13 +627,20 @@ address {
   padding: 6px 22px;
   background-color: #f5f4fa;
   color: #212121;
-  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   border-radius: 4px;
 }
 
 .portfolio__btn:hover, .portfolio__btn:focus {
+  color: #ffffff;
+  background-color: #2196f3;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.active-btn {
   color: #ffffff;
   background-color: #2196f3;
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -637,6 +660,10 @@ address {
       -ms-flex-direction: column;
           flex-direction: column;
   cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card__link:focus, .portfolio-card__link:hover {
@@ -818,6 +845,10 @@ address {
 
 .footer__feedback_link[target="_blank"] {
   color: #ffffff;
+}
+
+.footer__feedback_link:hover, .footer__feedback_link:focus {
+  color: #2196f3;
 }
 
 .subscribe__text {
